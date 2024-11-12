@@ -69,6 +69,8 @@ netsh interface portproxy delete v4tov4 listenport=4988 listenaddress=localhost
 ![服务端基础配置](演示图片/服务端基础配置.jpg)
 - 玩家列表
 ![玩家列表](演示图片/玩家列表.jpg)
+![玩家列表](演示图片/玩家牌组列表.jpg)
+![玩家列表](演示图片/对局回放信息.jpg)
 - 禁卡列表
 ![禁卡列表](演示图片/禁卡列表.jpg)
 - 卡牌信息查询
