@@ -24,6 +24,7 @@ exepath: "C:\\Users\\Administrator\\Desktop\\YgoMaster"
    ```npm install --安装依赖```
    ```npm run serve --运行至本地```
 5. 运行本地成功后进入 http://localhost:8081 访问管理页面，将```服务端基础IP```设置为你的服务器IP后点击页面最下方蓝色保存按钮，并点击右上角重启服务端完成部署。
+* ##### YgoMaster最新版本下载地址[Releases](https://github.com/pixeltris/YgoMaster/releases/)
 * ##### 开启PVP模式需要将游戏文件夹```masterduel_Data```复制到服务端```YgoMaster```同一路径下
 * ##### 每次修改服务器配置/禁卡列表/公告列表后都需要重启服务端完成修改 
 
@@ -56,6 +57,12 @@ netsh interface portproxy delete v4tov4 listenport=4988 listenaddress=localhost
 - 公告编辑
 ![游戏公告](演示图片/公告编辑.jpg)
 ![游戏公告](演示图片/公告查询.jpg)
+
+### 后续开发计划
+
+- Linux环境下YgoMaster的控制端
+- 玩家牌组展示卡牌图片
+- 卡牌更新文件上传服务端
 
 ### 相关图片
 - 服务端基础配置
