@@ -27,7 +27,7 @@ exepath: "C:\\Users\\Administrator\\Desktop\\YgoMaster"
 
 
 ### 联机相关
-
+- 玩家需要修改```YgoMaster/Data/ClientDataClientSettings.json```文件中的```MultiplayerToken```，将其设置为一串随机字符串，MultiplayerToken作为每个玩家的身份标识，通过MultiplayerToken获取服务端用户的个人信息与牌组/物品信息
 - 当前客户端配置文件ClientSettings.json中BaseIP与SessionServerIP只能设置为localhost，无法访问其他公网IP与域名下的服务端。可通过在本地进行端口转发实现访问公网IP或域名下的YgoMaster服务端
 - Windows端口转发命令(以管理员身份运行)
  ```
