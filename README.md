@@ -48,6 +48,7 @@ netsh interface portproxy delete v4tov4 listenport=4988 listenaddress=localhost
 - 禁卡列表中点击添加卡牌可以通过卡牌名称或卡牌ID进行搜索，并可以将其设置为限制、准限制、禁止卡
 - 禁卡列表中卡牌的名称存在于YgoMaster_管理页面_Vue项目中```/src/cards/```下的```zh_cards.json```与```jp_cards.json```分别为对应的中文卡名与日文卡名，中文卡名存在则显示中文卡名，否则显示日文卡名
 - 当游戏王MD的卡牌进度超过JSON文件中的卡牌列表时，禁卡表中的卡牌名称可能为空，需手动更新```zh_cards.json```与```jp_cards.json```
+- 部分异画卡牌名称可能为空，需手动添加ID与名称至```zh_cards.json```与```jp_cards.json```
 ### 公告设置
 
 公告设置页面可发布游戏内公告，包括滚动窗标题、小标题与正文，游戏中公告文本使用富文本展示，可通过设置富文本标签来修改包括字号```<size=25>```字体颜色```<color=#3c9cff>```行距```<indent=5%>```等内容,如下图所示
