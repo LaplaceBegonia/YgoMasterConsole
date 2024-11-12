@@ -1,6 +1,7 @@
 # YgoMasterConsole
 
 #### 基于SpringBoot与Vue的[YgoMaster](https://github.com/pixeltris/YgoMaster)公网联机PVP控制端
+#### Thanks to the developers involved in the [YgoMaster](https://github.com/pixeltris/YgoMaster) project for their long-term maintenance
 
 ### 功能
 - 开启/关闭公网PVP对战
