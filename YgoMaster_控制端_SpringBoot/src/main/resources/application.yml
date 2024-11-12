@@ -1,0 +1,8 @@
+server:
+  compression:
+    enabled: true
+    mime-types: application/json
+  port: 8080
+
+filepath: "C:\\Users\\Administrator\\Desktop\\YgoMaster\\Data"
+exepath: "C:\\Users\\Administrator\\Desktop\\YgoMaster"
