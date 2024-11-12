@@ -27,8 +27,8 @@ exepath: "C:\\Users\\Administrator\\Desktop\\YgoMaster"
 
 
 ### 联机相关
-- 玩家需要修改```YgoMaster/Data/ClientDataClientSettings.json```文件中的```MultiplayerToken```，将其设置为一串随机字符串，MultiplayerToken作为每个玩家的身份标识，通过MultiplayerToken获取服务端用户的个人信息与牌组/物品信息
-- 当前客户端配置文件ClientSettings.json中BaseIP与SessionServerIP只能设置为localhost，无法访问其他公网IP与域名下的服务端。可通过在本地进行端口转发实现访问公网IP或域名下的YgoMaster服务端
+- 玩家需要修改```YgoMaster/Data/ClientDataClientSettings.json```文件中的```MultiplayerToken```，将其设置为一串随机字符串，```MultiplayerToken```作为每个玩家的身份标识，客户端通过```MultiplayerToken```获取服务端用户的个人信息与牌组/物品信息
+- 当前客户端配置文件```ClientSettings.json```中```BaseIP```与```SessionServerIP```只能设置为 ```localhost``` ，无法访问其他公网IP与域名下的服务端。可通过在客户端本地进行端口转发实现访问公网IP或域名下的YgoMaster服务端
 - Windows端口转发命令(以管理员身份运行)
  ```
  netsh interface portproxy add v4tov4 listenport=BasePort listenaddress=localhost connectport=BasePort connectaddress=目标IP或域名
@@ -42,8 +42,17 @@ netsh interface portproxy delete v4tov4 listenport=4988 listenaddress=localhost
  ```
 
 ### 禁卡修改/卡牌查询
+- 禁卡表文件为 ```YgoMaster/Data/Regulation.json```,其中```10**```为默认禁卡表，截止2024-11-12，最新的禁卡表序号为```1028```,管理页面会获取序号大于```1000```小于```2000```的禁卡表为当前默认禁卡表
+- 禁卡列表中点击查看按钮，则会通过卡牌ID在[游戏王卡牌数组库](https://db.yugioh-card-cn.com/card_search.action.html)中查询展示对应的卡牌信息，包括卡牌效果、相关卡牌、发售情况等，并可以将其设置为限制、准限制、禁止卡或从禁卡表中移除
+- 禁卡列表中点击添加卡牌可以通过卡牌名称或卡牌ID进行搜索，并可以将其设置为限制、准限制、禁止卡
+- 禁卡列表中卡牌的名称存在于YgoMaster_管理页面_Vue项目中```/src/cards/```下的```zh_cards.json```与```jp_cards.json```分别为对应的中文卡名与日文卡名，中文卡名存在则显示中文卡名，否则显示日文卡名
+- 当游戏王MD的卡牌进度超过JSON文件中的卡牌列表时，禁卡表中的卡牌名称可能为空，需手动更新```zh_cards.json```与```jp_cards.json```
+### 公告设置
 
-
+公告设置页面可发布游戏内公告，包括滚动窗标题、小标题与正文，游戏中公告文本使用富文本展示，可通过设置富文本标签来修改包括字号```<size=25>```字体颜色```<color=#3c9cff>```行距```<indent=5%>```等内容,如下图所示
+- 公告编辑
+![游戏公告](演示图片/公告编辑.jpg)
+![游戏公告](演示图片/公告查询.jpg)
 
 ### 相关图片
 - 服务端基础配置
@@ -56,12 +65,8 @@ netsh interface portproxy delete v4tov4 listenport=4988 listenaddress=localhost
 ![卡牌信息查询](演示图片/卡牌信息查询.jpg)
 ![卡牌信息查询](演示图片/通过卡牌ID搜索卡牌信息.jpg)
 ![卡牌信息查询](演示图片/通过卡牌名称搜索卡牌信息.jpg)
-- 公告列表
-![公告列表](演示图片/公告列表.jpg)
 - 游戏主页
 ![游戏主页](演示图片/游戏主页.jpg)
-- 公告查询
-![公告查询](演示图片/公告查询.jpg)
 - PVP对战
 ![PVP对战](演示图片/PVP_1.jpg)
 ![PVP对战](演示图片/PVP_2.jpg)
