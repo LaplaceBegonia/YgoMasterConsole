@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>YgoMaster_Console</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>YgoMaster Console</name>
     <description>YgoMaster Console</description>
